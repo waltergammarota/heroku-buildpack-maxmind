@@ -43,6 +43,7 @@ download(){
 	if [ ! -f $DB ]; then
 		if [ ! -f $TAR ]; then
 			echo "-----> $EDITION: Database does not exist in cache, downloading."
+			echo "DESCARGANDO: https://s3.amazonaws.com/robotcpav7/maxmind/${EDITION}.tar.gz"
 			curl -o $TAR -L "https://s3.amazonaws.com/robotcpav7/maxmind/${EDITION}.tar.gz"
 		fi
 
